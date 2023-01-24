@@ -1,15 +1,16 @@
-name: Update
+name: Update Workflow
 
 on:
   push:
-    branches: [main]
 
 jobs:
-  deploy:
+
+  update:
+    name: Update
     runs-on: ubuntu-latest
 
     steps:
-      - name: Update your repository on TerpConnect when changes are pushed to main
+      - name: Update
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}

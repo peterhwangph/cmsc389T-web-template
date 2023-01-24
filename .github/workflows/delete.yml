@@ -1,13 +1,14 @@
-name: Delete
+name: Delete Workflow
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 
 jobs:
   delete:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Delete the repository from TerpConnect on workflow_dispatch
+      - name: Delete
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
