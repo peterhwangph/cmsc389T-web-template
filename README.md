@@ -28,4 +28,4 @@ Also, tested both configurations by manually running the Docker-Testing workflow
 
 ## Part 3
 ### TerpConnect Deployed Site
-Not Done
+https://terpconnect.umd.edu/~phwang25/cmsc389T-web-template/
