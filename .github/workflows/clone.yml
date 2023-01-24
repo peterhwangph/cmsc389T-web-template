@@ -1,4 +1,4 @@
-name: clone workflow
+name: Clone Workflow
 on:
   workflow_dispatch:
 jobs:
@@ -6,7 +6,7 @@ jobs:
     name: Clone
     runs-on: ubuntu-latest
     steps:
-      - name: testing
+      - name: Clean
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -14,5 +14,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-              cd /pub/phwang25
-              git clone https://github.com/peterhwangph/cmsc389T-web-template
+             unalias rm
+             rm -rf cmsc389T-web-template
