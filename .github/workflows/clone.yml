@@ -6,7 +6,7 @@ jobs:
     name: Clone
     runs-on: ubuntu-latest
     steps:
-      - name: Clean
+      - name: testing
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -14,5 +14,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-             unalias rm
-             rm -rf cmsc389T-web-template
+            git clone git@github.com:peterhwangph/cmsc389T-web-template.git
